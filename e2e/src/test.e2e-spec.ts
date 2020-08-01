@@ -10,6 +10,7 @@ describe('Login', function () {
         browser.restart();
     });
 
+    
     // Comprobar el valor de "cuota mensual", se envian los valores 170000 y 25 para valor de propiedad y años de financiamiento respectivamente, 
     // valor de cuota mensual debe ser USD 1,005.00
     it('Valor cuota mensual correcto', async function () {
