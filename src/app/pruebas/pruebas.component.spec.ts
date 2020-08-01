@@ -44,58 +44,7 @@ describe('PruebasComponent', () => {
       expect(service.filterTours()).not.toThrow;
     });
 
-    it('Caso de prueba #28', () => {
-      service.vm.location_id = 28;
-      tour = {
-        nombre: "Tour 28",
-        location_id: 28
-      } 
-      service.vm.productsCopy.push(tour);
-      service.flag = true;
-      expect(service.filterTours()).not.toThrow;
-    });
-//--------------------------
-    it('Caso de prueba #29', () => {
-      service.vm.location_id = 0;
-        tour = {
-          nombre: "Tour 29",
-          location_id: 29
-        } 
-        service.vm.productsCopy.push(tour);
-      expect(service.filterTours()).not.toThrow;
-    });
-
-    it('Caso de prueba #30', () => {
-      service.vm.location_id = 0;
-        tour = {
-          nombre: "Tour 30",
-          location_id: 30
-        } 
-        service.vm.productsCopy.push(tour);
-      expect(service.filterTours()).not.toThrow;
-    });
-//--------------------------
-    it('Caso de prueba #31', () => {
-      service.vm.location_id = 0;
-        tour = {
-          nombre: "Tour 30",
-          location_id: 30
-        } 
-        service.vm.productsCopy.push(tour);
-      expect(service.filterTours()).not.toThrow;
-    });
-    
-    it('Caso de prueba #33', () => {
-      service.vm.location_id = 0;
-      expect(service.filterTours()).not.toThrow;
-    });
-
     it('Caso de prueba #34', () => {
-      expect(service.filterTours()).not.toThrow;
-    });
-
-    it('Caso de prueba #35', () => {
-      service.vm.filterByText = 'Text';
       expect(service.filterTours()).not.toThrow;
     });
 
@@ -120,7 +69,6 @@ describe('PruebasComponent', () => {
       service.vm.amountAppliedToDocuments = 1;
       expect(service.validateAmounts()).not.toThrow;
     });
-
 
    });
 });

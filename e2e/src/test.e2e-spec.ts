@@ -3,16 +3,28 @@ import { browser, by, element } from 'protractor';
 describe('Login', function () {
     beforeEach(async function () {
         await browser.waitForAngularEnabled(false);
-        await browser.get("https://www.bgeneral.fi.cr/calculadora-hipoteca/");
+        await browser.get("https://qa.timtravel.app/#!/purchase_report");
     });
 
     afterEach(function () {
         browser.restart();
     });
 
+    it('Prueba de logueo', async function () {
+        browser.sleep(500);
+        element(by.name('valor')).sendKeys('170000');
+        element(by.name('anio')).sendKeys('25');
+        element(by.className("fusion-button")).click().then(function () {
+            browser.sleep(600);
+            expect(element(by.xpath('//*[@id="content"]/div/div[3]/div/div/div/div/ui-view/purchase-report-ctrl/purchase-report/form/div/div[4]/div/div[1]/button')).getText()).not.toThrowError();
+        });
+    });
+
+
+
     // Comprobar el valor de "cuota mensual", se envian los valores 170000 y 25 para valor de propiedad y años de financiamiento respectivamente, 
     // valor de cuota mensual debe ser USD 1,005.00
-    it('Valor cuota mensual correcto', async function () {
+    /*it('Valor cuota mensual correcto', async function () {
         browser.sleep(500);
         element(by.name('valor')).sendKeys('170000');
         element(by.name('anio')).sendKeys('25');
@@ -57,6 +69,6 @@ describe('Login', function () {
             browser.sleep(600);
             expect(element(by.xpath('//*[@id="post-15015"]/div/div/div[1]/div[1]/div/div[2]/div[1]/span[2]')).getText()).toEqual("USD 148,000.00");
         });
-    });
+    });*/
 
 });
