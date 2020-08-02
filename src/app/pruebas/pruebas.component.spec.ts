@@ -33,7 +33,7 @@ describe('PruebasComponent', () => {
   
   describe('Funcion FilterTours', function () {
 
-    it('Caso de prueba #21', () => {
+    it('Caso de prueba #1', () => {
       service.vm.filterByText = "Text";
       service.vm.location_id = 3;
       tour = {
@@ -44,7 +44,7 @@ describe('PruebasComponent', () => {
       expect(service.filterTours()).not.toThrow;
     });
 
-    it('Caso de prueba #34', () => {
+    it('Caso de prueba #2', () => {
       expect(service.filterTours()).not.toThrow;
     });
 
@@ -52,19 +52,19 @@ describe('PruebasComponent', () => {
 
    describe('Funcion ValidateAmounts', function () {
 
-    it('Caso de prueba #38', () => {
+    it('Caso de prueba #3', () => {
       service.vm.item.amount = 0;
       service.vm.amountAppliedToDocuments = 1;
       expect(service.validateAmounts()).not.toThrow;
     });
 
-    it('Caso de prueba #39', () => {
+    it('Caso de prueba #4', () => {
       service.vm.item.amount = 1;
       service.vm.amountAppliedToDocuments = 0;
       expect(service.validateAmounts()).not.toThrow;
     });
 
-    it('Caso de prueba #40', () => {
+    it('Caso de prueba #5', () => {
       service.vm.item.amount = 1;
       service.vm.amountAppliedToDocuments = 1;
       expect(service.validateAmounts()).not.toThrow;
